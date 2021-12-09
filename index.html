@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content page</title>
+</head>
+<body>
+    <section class="content">
+        <form action="index.js" method="post">
+            <p>Paste the content</p>
+            <textarea name="Content" id="contenttext" cols="150" rows="40" placeholder="Paste Your Content Here" onkeyup="wordcount(this);"></textarea>
+            <span id="word-count"></span>
+            <button type="post">find</button>
+        </form>
+    </section>
+    <p>keywords will appear here</p>
+    <textarea name="Content" id="content" cols="50" rows="10" placeholder="keywords will appear here"></textarea>
+    <p id="clist"></p>
+    <script src="index.js"></script>
+</body>
+</html>
