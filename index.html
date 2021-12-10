@@ -10,13 +10,13 @@
     <section class="content">
         <form action="index.js" method="post">
             <p>Paste the content</p>
-            <textarea name="Content" id="contenttext" cols="150" rows="40" placeholder="Paste Your Content Here" onkeyup="wordcount(this);"></textarea>
+            <textarea name="Content" id="contenttext" cols="80" rows="40" placeholder="Paste Your Content Here" onkeyup="wordcount(this);"></textarea>
             <span id="word-count"></span>
-            <button type="post">find</button>
+            <button type="button" onclick="removestopwords()">find</button>
         </form>
     </section>
     <p>keywords will appear here</p>
-    <textarea name="Content" id="content" cols="50" rows="10" placeholder="keywords will appear here"></textarea>
+    <textarea name="ContentKeywords" id="contentKeywords" cols="50" rows="10" placeholder="keywords will appear here"></textarea>
     <p id="clist"></p>
     <script src="index.js"></script>
 </body>
