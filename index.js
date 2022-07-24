@@ -2,12 +2,13 @@ const stopwords = ['i','me','my','myself','we','our','ours','ourselves','you','y
 
 function firstLetterUpper(theString) {
 	var newString = theString.replace(/(^\s*\w|[\.\!\?]\s*\w)/g,function(c){return c.toUpperCase()});
-  return newString;
+    return newString;
 }
 
 function removeDuplicates(contentArray){
     ContentString = new Set(contentArray);
     console.log(new Set(contentArray));
+    return Array.from(ContentString);
 }
 
 function wordcount(self) {
@@ -26,13 +27,13 @@ function removestopwords() {
     contentstring = contentstring.toLowerCase();
     words = contentstring.split(' ')
     for(i=0;i<words.length;i++) {
-       word_clean = words[i].split(".").join("")
-       if(!stopwords.includes(word_clean)) {
-           res.push(word_clean)
-       }
+        word_clean = words[i].split(".").join("")
+        if(!stopwords.includes(word_clean)) {
+            res.push(word_clean)
+        }
     }
-    document.getElementById('contentKeywords').innerHTML = (res.join(' '));
+    document.getElementById('contentKeywords').innerHTML = removeDuplicates(res);
     document.getElementById('clist').innerHTML = res.length;
-    removeDuplicates(res);
+    
 }  
 
